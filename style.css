@@ -1,15 +1,20 @@
+.canvas {
+  width: 600px;
+  height: 600px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
 .pixel {
-  width: 10px;
-  height: 10px;
+  max-height: 100%;
   margin: 0;
   padding: 0;
-  border: 2px solid red;
+  border: 1px solid red;
+  flex-grow: 1;
 }
-/* .pixel:hover{
-  background-color: black;
-} */
 .row {
   display: flex;
+  flex-grow: 1;
 }
 .black {
   background-color: black;
