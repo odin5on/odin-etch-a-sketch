@@ -9,7 +9,7 @@
   max-height: 100%;
   margin: 0;
   padding: 0;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   flex-grow: 1;
 }
 .row {
@@ -18,4 +18,9 @@
 }
 .black {
   background-color: black;
+}
+.main-containter {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
 }
