@@ -11,11 +11,23 @@ function generateCanvas(x){
       pixel.classList.add('pixel');
       pixel.addEventListener('mouseover', (e) => {
         if(e.buttons == 1){
-          e.target.classList.add('black');
+          if(document.querySelector('#colors').checked){
+            console.log('colorful value selected');
+            let backgroundColor = 'rgb(' + (Math.random()*255) + ', ' + Math.random()*255 + ', ' + Math.random()*255+')'
+            e.target.style.backgroundColor = backgroundColor;
+          } else {
+            e.target.classList.add('black');
+          }
         }
       });
       pixel.addEventListener('mousedown', (e) => {
-        e.target.classList.add('black');
+        if(document.querySelector('#colors').checked){
+          console.log('colorful value selected');
+          let backgroundColor = 'rgb(' + (Math.random()*255) + ', ' + Math.random()*255 + ', ' + Math.random()*255+')'
+          e.target.style.backgroundColor = backgroundColor;
+        } else {
+          e.target.classList.add('black');
+        }
       })
       row.appendChild(pixel);
     }

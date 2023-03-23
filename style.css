@@ -5,11 +5,19 @@
   display: flex;
   flex-direction: column;
 }
+.controls{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header {
+  display: flex;
+  justify-content: center;
+}
 .pixel {
   max-height: 100%;
   margin: 0;
   padding: 0;
-  /* border: 1px solid red; */
   flex-grow: 1;
 }
 .row {

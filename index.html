@@ -9,10 +9,30 @@
   <title>Document</title>
 </head>
 <body>
+  <div class="header">
+    <h1>Etch-A-Sketch</h1>
+  </div>
   <div class="main-containter">
-    <input type="range" max="100" min="1" value="16" onchange="generateCanvas(this.value)">
+    <div class="controls">
+      <p>Use the slider to make an N x N grid</p>
+      <input id="range-selector" type="range" max="100" min="1" value="16" onchange="generateCanvas(this.value)">
+      <p>Value: <strong id="value"></strong></p>
+      <p>Colorful pixels <input id="colors" type="checkbox"></p>
+      <button onclick="generateCanvas(document.querySelector('#range-selector').value)">Clear</button>
+    </div>
     <div class="canvas"></div>
   </div>
   
 </body>
+
+<script>
+  const value = document.querySelector('#value');
+  const input = document.querySelector('#range-selector');
+  value.textContent = input.value;
+  input.addEventListener("input", (event) => {
+    value.textContent = event.target.value;
+  });
+
+  generateCanvas(input.value);
+</script>
 </html>
